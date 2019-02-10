@@ -10,30 +10,23 @@ without finding a "pure" file without dependencies.
 
 Just clone this project and install it:
 
-`
 $ git clone https://github.com/kamadorueda/dependency-tree.git
 
 $ cd dependency-tree
 
 $ python3 -m pip install --user .
-`
 
 Now run it against a project:
 
-`
 $ deptree [PATH]
-`
 
 # Examples
 Let's clone a real project:
 
-`
 $ git clone https://github.com/yaml/pyyaml.git
-`
 
 And create a dependency tree:
 
-`
 $ deptree pyyaml/lib3/yaml
 
     # We should start reading this files since they have no dependencies
@@ -112,5 +105,3 @@ $ deptree pyyaml/lib3/yaml
         scanner
         
         tokens
-`
-
