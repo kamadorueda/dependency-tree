@@ -24,42 +24,43 @@ $ git clone https://github.com/yaml/pyyaml.git
 And create a dependency tree:
 
 ```
-$ deptree pyyaml/lib3/yaml
+$ cd pyyaml/lib3
+$ deptree yaml
     # We should start reading this files since they have no dependencies
-    pyyaml/lib3/yaml/events.py
-    pyyaml/lib3/yaml/tokens.py
-    pyyaml/lib3/yaml/error.py
-    pyyaml/lib3/yaml/nodes.py
+    yaml/events.py
+    yaml/tokens.py
+    yaml/error.py
+    yaml/nodes.py
     # Then read this files which depends on the previous files
-    pyyaml/lib3/yaml/emitter.py
+    yaml/emitter.py
         error
         events
-    pyyaml/lib3/yaml/scanner.py
+    yaml/scanner.py
         error
         tokens
-    pyyaml/lib3/yaml/composer.py
+    yaml/composer.py
         error
         events
         nodes
-    pyyaml/lib3/yaml/resolver.py
+    yaml/resolver.py
         error
         nodes
         re
-    pyyaml/lib3/yaml/serializer.py
+    yaml/serializer.py
         error
         events
         nodes
-    pyyaml/lib3/yaml/reader.py
+    yaml/reader.py
         codecs
         error
         re
     # And so on
-    pyyaml/lib3/yaml/dumper.py
+    yaml/dumper.py
         emitter
         representer
         resolver
         serializer
-    pyyaml/lib3/yaml/parser.py
+    yaml/parser.py
         error
         events
         scanner
